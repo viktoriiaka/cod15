@@ -2,52 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viktoriia Karpenko</title>
     <style>
         body {
-            margin-left: 0%;
-            margin-top: 25%;
-            background-color:  #ff7606;
+            background-color: rgb(249, 128, 6);
         }
 
-        table, th, td {
+        table {
+            width: 100%;
+            height: 100%;
             border: 1px solid black;
             border-collapse: collapse;
+            border-style: solid;
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid black;
         }
 
         img {
-            width: 70%;
+            width: 600px;
+            height: 500px;
         }
-         img "img.2.jpg" {
-            width: 100%;
+
+        #container {
+            margin: 0 auto;
+            width: 1400px;
         }
     </style>
 </head>
 <body>
-    <h1>
-        <table style="width:100%">
-             <table style="lenght:90%">
-            <tbody>
-                <tr>
-                    <th rowspan="3" style="background-color:  #ff7606;">
-                        <img src="img.1.jpg">
-                    </th>
-                    <th style="background-color:  #ff7606;">
-                        <a href="http://zsdios.pl/">Technikum w Zwierzyńcu</a>
-                    </th>
-                    <th rowspan="2" style="background-color:  #ff7606;">
-                        <img src="img.2.jpg">
-                    </th>
-                </tr>
-                <tr>
-                    <td style="background-color:  #ff7606;">
-                        Viktoriia Karpenko<br style="background-color:  #ff7606;">26.09.2023
-                    </td>
-                </tr>
-            </tbody>
+    <div id="container">
+        <table>
+            <tr>
+                <td rowspan="3"><img src="img.1.jpg" alt=""></td>
+                <td style="width: 200px;"><a href="http://zsdios.pl/">Link na Technikum w Zwierzyncu.</a></td>
+                <td rowspan="3"><img src="img.2.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td>Karpenko Viktoriia</td>
+            </tr>
         </table>
-    </h1>
+    </div>
+    <script type="text/javascript">
+        setInterval(function() { document.getElementById("date").innerText = new Date() }, 1000);
+    </script>
+    <footer>
+        <p>Data: <span id="currentDate"></span></p>
+ </footer>
+	 <script>
+        // Skrypt do wyświetlania aktualnej daty
+        const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleDateString();
+    </script>
 </body>
 </html>
